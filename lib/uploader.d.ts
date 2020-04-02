@@ -23,6 +23,7 @@ export declare abstract class Uploader implements UploadState {
     progress: number;
     remaining: number;
     speed: number;
+    type: string;
     /** Custom headers */
     headers: Record<string, any>;
     /** Metadata Object */
