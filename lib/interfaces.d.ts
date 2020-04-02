@@ -26,6 +26,8 @@ export interface UploadState {
     readonly status: UploadStatus;
     /** Unique upload id */
     readonly uploadId: string;
+    /** type */
+    type: string;
     /** File url */
     readonly url: string;
 }
