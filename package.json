@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      "ngx-uploadx@3.3.4",
+      "/var/www/html/gudsho-project/gudsho-studio"
+    ]
+  ],
+  "_from": "ngx-uploadx@3.3.4",
+  "_id": "ngx-uploadx@3.3.4",
+  "_inBundle": false,
+  "_integrity": "sha512-kWe6HLPQQDU/5W6UlFb8btrdQfzxKAmGUALFYPLzLRNAYmUnw0Tqf5ZllI0CCriavExqmUHzfG6zQ7fme+reTg==",
+  "_location": "/ngx-uploadx",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "ngx-uploadx@3.3.4",
+    "name": "ngx-uploadx",
+    "escapedName": "ngx-uploadx",
+    "rawSpec": "3.3.4",
+    "saveSpec": null,
+    "fetchSpec": "3.3.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ngx-uploadx/-/ngx-uploadx-3.3.4.tgz",
+  "_spec": "3.3.4",
+  "_where": "/var/www/html/gudsho-project/gudsho-studio",
+  "author": {
+    "name": "kukhariev",
+    "email": "q_h@inbox.ru"
+  },
+  "bugs": {
+    "url": "https://github.com/kukhariev/ngx-uploadx/issues"
+  },
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "description": "Angular Resumable Upload Module",
+  "es2015": "fesm2015/ngx-uploadx.js",
+  "esm2015": "esm2015/ngx-uploadx.js",
+  "esm5": "esm5/ngx-uploadx.js",
+  "fesm2015": "fesm2015/ngx-uploadx.js",
+  "fesm5": "fesm5/ngx-uploadx.js",
+  "homepage": "https://github.com/kukhariev/ngx-uploadx#readme",
+  "keywords": [
+    "angular",
+    "upload",
+    "chunk",
+    "resumable",
+    "tus"
+  ],
+  "license": "MIT",
+  "main": "bundles/ngx-uploadx.umd.js",
+  "metadata": "ngx-uploadx.metadata.json",
+  "module": "fesm5/ngx-uploadx.js",
+  "name": "ngx-uploadx",
+  "peerDependencies": {
+    "@angular/core": ">=6.0.0 <10.0.0",
+    "rxjs": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kukhariev/ngx-uploadx.git"
+  },
+  "sideEffects": false,
+  "typings": "ngx-uploadx.d.ts",
+  "version": "3.3.4"
+}
