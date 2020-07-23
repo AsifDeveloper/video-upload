@@ -535,7 +535,8 @@ var Tus = /** @class */ (function (_super) {
                         body = this.getChunk().body;
                         headers = {
                             'Content-Type': 'application/offset+octet-stream',
-                            'Upload-Offset': "" + this.offset
+                            'Upload-Offset': "" + this.offset,
+                            'ngsw-bypass': 'true'
                         };
                         return [4 /*yield*/, this.request({ method: 'PATCH', body: body, headers: headers })];
                     case 1:
@@ -585,7 +586,8 @@ var UploaderX = /** @class */ (function (_super) {
                         headers = {
                             'Content-Type': 'application/json; charset=utf-8',
                             'X-Upload-Content-Length': this.size.toString(),
-                            'X-Upload-Content-Type': this.file.type || 'application/octet-stream'
+                            'X-Upload-Content-Type': this.file.type || 'application/octet-stream',
+                            'ngsw-bypass': 'true'
                         };
                         return [4 /*yield*/, this.request({
                                 method: 'POST',
@@ -614,7 +616,8 @@ var UploaderX = /** @class */ (function (_super) {
                         _a = this.getChunk(), end = _a.end, body = _a.body;
                         headers = {
                             'Content-Type': 'application/octet-stream',
-                            'Content-Range': "bytes " + this.offset + "-" + (end - 1) + "/" + this.size
+                            'Content-Range': "bytes " + this.offset + "-" + (end - 1) + "/" + this.size,
+                            'ngsw-bypass': 'true'
                         };
                         return [4 /*yield*/, this.request({ method: 'PUT', body: body, headers: headers })];
                     case 1:
@@ -632,7 +635,8 @@ var UploaderX = /** @class */ (function (_super) {
                     case 0:
                         headers = {
                             'Content-Type': 'application/octet-stream',
-                            'Content-Range': "bytes */" + this.size
+                            'Content-Range': "bytes */" + this.size,
+                            'ngsw-bypass': 'true'
                         };
                         return [4 /*yield*/, this.request({ method: 'PUT', headers: headers })];
                     case 1:

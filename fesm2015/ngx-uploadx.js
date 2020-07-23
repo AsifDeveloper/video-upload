@@ -430,7 +430,8 @@ class Tus extends Uploader {
             const { body } = this.getChunk();
             const headers = {
                 'Content-Type': 'application/offset+octet-stream',
-                'Upload-Offset': `${this.offset}`
+                'Upload-Offset': `${this.offset}`,
+                'ngsw-bypass': 'true'
             };
             yield this.request({ method: 'PATCH', body, headers });
             return this.getOffsetFromResponse();
@@ -463,7 +464,8 @@ class UploaderX extends Uploader {
             const headers = {
                 'Content-Type': 'application/json; charset=utf-8',
                 'X-Upload-Content-Length': this.size.toString(),
-                'X-Upload-Content-Type': this.file.type || 'application/octet-stream'
+                'X-Upload-Content-Type': this.file.type || 'application/octet-stream',
+                'ngsw-bypass': 'true'
             };
             yield this.request({
                 method: 'POST',
@@ -484,7 +486,9 @@ class UploaderX extends Uploader {
             const { end, body } = this.getChunk();
             const headers = {
                 'Content-Type': 'application/octet-stream',
-                'Content-Range': `bytes ${this.offset}-${end - 1}/${this.size}`
+                'Content-Range': `bytes ${this.offset}-${end - 1}/${this.size}`,
+                'ngsw-bypass': 'true',
+                'ngsw-bypass': 'true'
             };
             yield this.request({ method: 'PUT', body, headers });
             return this.getOffsetFromResponse();
@@ -494,7 +498,8 @@ class UploaderX extends Uploader {
         return __awaiter(this, void 0, void 0, function* () {
             const headers = {
                 'Content-Type': 'application/octet-stream',
-                'Content-Range': `bytes */${this.size}`
+                'Content-Range': `bytes */${this.size}`,
+                'ngsw-bypass': 'true'
             };
             yield this.request({ method: 'PUT', headers });
             return this.getOffsetFromResponse();

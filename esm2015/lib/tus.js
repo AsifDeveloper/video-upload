@@ -32,7 +32,8 @@ export class Tus extends Uploader {
             const { body } = this.getChunk();
             const headers = {
                 'Content-Type': 'application/offset+octet-stream',
-                'Upload-Offset': `${this.offset}`
+                'Upload-Offset': `${this.offset}`,
+                'ngsw-bypass': 'true'
             };
             yield this.request({ method: 'PATCH', body, headers });
             return this.getOffsetFromResponse();

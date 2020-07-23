@@ -46,7 +46,8 @@ var Tus = /** @class */ (function (_super) {
                         body = this.getChunk().body;
                         headers = {
                             'Content-Type': 'application/offset+octet-stream',
-                            'Upload-Offset': "" + this.offset
+                            'Upload-Offset': "" + this.offset,
+                            'ngsw-bypass': 'true'
                         };
                         return [4 /*yield*/, this.request({ method: 'PATCH', body: body, headers: headers })];
                     case 1:
